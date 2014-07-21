@@ -1,0 +1,15 @@
+h1 {
+    background:darkblue;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:4%;
+    padding:6%;
+    border:0.5em solid grey;
+    color:#EEE;
+    font-size: 80px;
+    font-family: sans-serif;
+    text-align: center;
+}
