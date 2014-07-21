@@ -8,5 +8,6 @@ get "/" do
 end
 
 get "/s/:sign" do
-  params[:sign]
+  @sign_text = params[:sign]
+  erb :sign_as_html
 end
