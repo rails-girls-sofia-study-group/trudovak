@@ -4,7 +4,7 @@ require 'bundler/setup'
 Bundler.require(:default)
 
 get "/" do
-  "Здравей, Трудовак!"
+  erb :index
 end
 
 get "/s/:sign" do
