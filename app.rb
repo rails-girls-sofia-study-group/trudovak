@@ -7,6 +7,11 @@ get "/" do
   erb :index
 end
 
+post "/s/" do
+  @sign_text = params[:sign]
+  erb :sign_as_html
+end
+
 get "/s/:sign" do
   @sign_text = params[:sign]
   erb :sign_as_html
