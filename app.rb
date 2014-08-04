@@ -9,6 +9,7 @@ end
 
 post "/s/" do
   @sign_text = params[:sign]
+  @sign_colour = params[:colour]
   @sign_link = request.url + @sign_text
   erb :sign_as_html
 end
