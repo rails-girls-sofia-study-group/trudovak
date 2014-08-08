@@ -14,6 +14,13 @@ post "/s/" do
   redirect to("/s/#{@sign_colour}/#{@sign_text}")
 end
 
+get "/fullscreen/:colour/:sign" do
+  @sign_text = params[:sign]
+  @sign_colour = params[:colour]
+  @sign_link = request.url + @sign_text
+  erb :sign_as_html_fullscreen
+end
+
 get "/s/:colour/:sign" do
   @sign_text = params[:sign]
   @sign_colour = params[:colour]
