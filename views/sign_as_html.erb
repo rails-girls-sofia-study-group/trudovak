@@ -8,7 +8,9 @@
 	</head>
 	<body>
 		<h1 class="<%= @sign_colour %>-sign tabelka-text"><%= @sign_text %></h1>
-		<p>Свръзка: <%= @sign_link %></p>
-		<a href="/fullscreen/<%= @sign_colour %>/<%= URI.escape(@sign_text) %>">На цял екран</a> 
+		<p>
+			<a href=" <%= @sign_link %>">Свръзка</a> |
+			<a href="/fullscreen/<%= @sign_colour %>/<%= URI.escape(@sign_text) %>" target="_blank">На цял екран</a>
+		</p>
 	</body>
 </html>
