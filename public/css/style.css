@@ -7,12 +7,16 @@ body {
 h1 {
 /*other H1 attributes possible*/
     font-size: 20px;
+}
+
+.input-form {
 
 }
 
 .textbox {
-    size:500px;
+
 }
+
 
 .tabelka-text {
     /*background:darkblue;*/
@@ -41,4 +45,3 @@ h1 {
 .blue-sign {
    background-image: url("../bg-clean-blue.jpg");
 }
-
