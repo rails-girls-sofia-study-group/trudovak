@@ -30,12 +30,10 @@ h1 {
     /*border:0.5em solid grey;*/
     color:#EEE;
     font-size: 80px;
-    font-family: sans-serif;
     text-align: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
-    white-space: pre;
 }
 
 .red-sign {
