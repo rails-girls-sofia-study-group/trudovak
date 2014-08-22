@@ -1,21 +1,37 @@
 <html>
 <head>
 	<title>Трудовак</title>
+		<link 
+		rel="stylesheet"
+		type="text/css"
+		href="/css/style.css">
 </head>
 <body>
-<p>Здравей, трудовак!</p>
+	<h1>Здравей, трудовак!</h1>
 
-<form name="input" action="s/" method="post">
+	<form name="input" action="s/" method="post" class="input-form">
 
-<p>С какво ще поздравим публиката днес?</p>
-С това: <br><input type="text" name="sign">
+		<p>С какво ще поздравим публиката днес?</p>
+		С това: <br>
+		<textarea name="sign" rows="4" wrap="hard" autofocus class="textbox" placeholder="Въведи текста на табелката тук"></textarea>
 
-<p>Как го виждаш?</p>
-<input type="radio" name="colour" value="blue" checked="checked">Посинено <img width="25px" src="../bg-clean-blue.jpg"><br>
-<input type="radio" name="colour" value="red">Зачервено <img width="25px" src="../bg-clean-red.jpg"><br>
-<br>
+		<p>Как го виждаш?</p>
+		<input type="radio" name="colour" value="blue" checked="checked">
+		Посинено
+		<img width="25px" src="../bg-clean-blue.jpg"><br>
 
-<input type="submit" value="Хайде, готово!">
-</form>
+		<input type="radio" name="colour" value="red">
+		Зачервено
+		<img width="25px" src="../bg-clean-red.jpg"><br>
+		<br>
+
+	<select name="font">
+	 	<option value="serif">Serif</option>
+	 	<option value="sans-serif">Sans-serif</option>
+	 	<option value="monospace">Monospace</option>
+	</select>
+
+	<input type="submit" value="Хайде, готово!">
+	</form>
 </body>
 </html>

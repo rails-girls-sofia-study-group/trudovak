@@ -1,4 +1,24 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    color:black;
+}
+
 h1 {
+/*other H1 attributes possible*/
+    font-size: 20px;
+}
+
+.input-form {
+
+}
+
+.textbox {
+
+}
+
+
+.tabelka-text {
     /*background:darkblue;*/
     position:fixed;
     top:0;
@@ -10,7 +30,6 @@ h1 {
     /*border:0.5em solid grey;*/
     color:#EEE;
     font-size: 80px;
-    font-family: sans-serif;
     text-align: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;

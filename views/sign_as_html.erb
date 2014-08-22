@@ -12,10 +12,15 @@
 			type = "text/javascript"></script>
 	</head>
 	<body>
-		<h1 class="<%= @sign_colour %>-sign"><%= @sign_text %></h1>
-		<label for = "copy-field">Свръзка:</label>
-		<input type = "text" name = "copy-field" id = "copy-field" value = "<%= @url %>">
-		<button type="button" data-clipboard-text="<%= @url %>" id="copy-button" value="fdsd">Свръзка</button>
+
+		<h1 class="<%= @sign_colour %>-sign tabelka-text" style="font-family: <%= @sign_font %>">
+			<%= @sign_text %>
+		</h1>
+		<p>
+		<input type = "text" name = "copy-field" id = "copy-field" value = "<%= @sign_link %>">
+		<button type="button" data-clipboard-text="<%= @sign_link %>" id="copy-button" value="fdsd">Свръзка</button>|
+			<a href="/fullscreen/<%= @sign_colour %>/<%= @sign_font %>/<%= URI.escape(@sign_text) %>" target="_blank">На цял екран</a>
+		</p>
 
 	</body>
 </html>
