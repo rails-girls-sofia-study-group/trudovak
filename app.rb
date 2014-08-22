@@ -11,6 +11,7 @@ post "/s/" do
   @sign_text = params[:sign]
   @sign_colour = params[:colour]
   @sign_link = request.url + @sign_text
+  @sign_url = request.host + request.path
   erb :sign_as_html
 end
 

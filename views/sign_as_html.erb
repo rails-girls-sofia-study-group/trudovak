@@ -5,9 +5,17 @@
 			rel="stylesheet"
 			type="text/css"
 			href="/css/style.css">
+		<script src="/javascript/ZeroClipboard.js"></script>
+
+		<script 
+			src="/javascript/scripts.js"
+			type = "text/javascript"></script>
 	</head>
 	<body>
 		<h1 class="<%= @sign_colour %>-sign"><%= @sign_text %></h1>
-		<p>Свръзка: <%= @sign_link %></p>
+		<label for = "copy-field">Свръзка:</label>
+		<input type = "text" name = "copy-field" id = "copy-field" value = "<%= @url %>">
+		<button type="button" data-clipboard-text="<%= @url %>" id="copy-button" value="fdsd">Свръзка</button>
+
 	</body>
 </html>
