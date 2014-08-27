@@ -35,6 +35,7 @@ h1 {
     background-repeat: no-repeat;
     background-position: center;
     white-space: pre;
+    word-wrap: break-word;
 }
 
 .red-sign {
