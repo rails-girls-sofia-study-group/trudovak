@@ -11,7 +11,7 @@
 		</h1>
 		<p>
 			<a href=" <%= @sign_link %>">Свръзка</a> |
-			<a href="/fullscreen/<%= @sign_colour %>/<%= @sign_font %>/<%= URI.escape(@sign_text) %>" target="_blank">На цял екран</a>
+			<a href="/fullscreen/<%= @sign_colour %>/<%= @sign_font %>/<%= CGI.escape(@sign_text) %>" target="_blank">На цял екран</a>
 		</p>
 	</body>
 </html>
