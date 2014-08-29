@@ -1,4 +1,3 @@
-
 window.onload=function(){
 	var inputElement = document.getElementById('copy-field');
 
@@ -22,6 +21,3 @@ window.onload=function(){
 	  } );
 	} );
 };
-
-
-
