@@ -53,3 +53,15 @@ h1 {
 .blue-sign {
    background-image: url("../bg-clean-blue.jpg");
 }
+
+.long-text {
+    font-size: 20px;
+}
+
+.medium-text {
+    font-size: 50px;
+}
+
+.short-text {
+    font-size: 100px;
+}
