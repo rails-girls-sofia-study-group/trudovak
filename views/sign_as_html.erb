@@ -7,8 +7,10 @@
 			href="/css/style.css">
 	</head>
 	<body>
-		<h1 class="<%= @sign_colour %>-sign tabelka-text" style="font-family: <%= @sign_font %>"><%= @sign_text %>
-		</h1>
+		<div id = "tabelka-wrapper">
+			<h1 class="<%= @sign_colour %>-sign tabelka-text" style="font-family: <%= @sign_font %>"><%= @sign_text %>
+			</h1>
+		</div>
 		<p>
 			<a href=" <%= @sign_link %>">Свръзка</a> |
 			<a href="/fullscreen/<%= @sign_colour %>/<%= @sign_font %>/<%= URI.escape(@sign_text) %>" target="_blank">На цял екран</a>

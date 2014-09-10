@@ -24,4 +24,10 @@ window.onload=function(){
 };
 
 
+function autoResizeText() {
+	if(){
+		
+	}
+}
+
 
