@@ -26,22 +26,20 @@ window.onload=function(){
 
 function resizeFont(){
 	var tabelkaVisochina = document.getElementById('tabelka-wrapper').clientHeight;
-	console.log("tabela " + tabelkaVisochina);
 	var textVisochina = document.getElementById('tabelka-text').clientHeight;
-	console.log("text " + textVisochina);
 	var ratio = textVisochina/tabelkaVisochina;
-	console.log(ratio);
-	if(ratio>1) {
-		var fontSizeTbl = window.getComputedStyle(document.getElementById("tabelka-text")).fontSize;
-		fontSizeTbl = parseInt(fontSizeTbl);
-		fontSizeTbl = fontSizeTbl/ratio;
-		console.log(fontSizeTbl);
-		document.getElementById("tabelka-text").style.fontSize = fontSizeTbl+"px";
-		//Да намерим текущия размер на фонта от css
-		//Да го разделим на съотношението ratio
-		//Да дадем на текста новият размер
-	} 
-}
+	var fontSizeTbl =  parseInt(window.getComputedStyle(document.getElementById("tabelka-text")).fontSize);
+
+	if (ratio < 1) {
+		console.log("tabelkaVisochina:" + tabelkaVisochina + "    text: "+ textVisochina);
+		return ;
+	}
+	
+	document.getElementById("tabelka-text").style.fontSize = fontSizeTbl - 10 +"px";
+	resizeFont();
+
+} 
+
 
 
 

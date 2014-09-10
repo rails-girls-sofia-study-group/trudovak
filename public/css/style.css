@@ -30,7 +30,6 @@ h1 {
     right:0;
     bottom:0;
     margin:4%;
-    padding:6%;
     /*border:0.5em solid grey;*/
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -38,8 +37,9 @@ h1 {
 }
 
 #tabelka-text{
+    padding:6%;
     color:#EEE;
-    font-size: 140px;
+    font-size: 180px;
     text-align: center;
     white-space: pre;
     word-wrap: break-word;
