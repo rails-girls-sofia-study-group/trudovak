@@ -1,17 +1,19 @@
 <html>
 	<head>
 		<title><%= @sign_text %> - Трудовак</title>
-		<link
+		<link 
 			rel="stylesheet"
 			type="text/css"
 			href="/css/style.css">
+		<script src="/javascript/scripts.js"></script>
 	</head>
 	<body>
-		<h1 class="<%= @sign_colour %>-sign tabelka-text" style="font-family: <%= @sign_font %>"><%= @sign_text %>
-		</h1>
 		<p>
 			<a href=" <%= @sign_link %>">Свръзка</a> |
-			<a href="/fullscreen/<%= @sign_colour %>/<%= @sign_font %>/<%= CGI.escape(@sign_text) %>" target="_blank">На цял екран</a>
+			<a href="/fullscreen/<%= @sign_colour %>/<%= @sign_font %>/<%= URI.escape(@sign_text) %>" target="_blank">На цял екран</a>
 		</p>
+		<div id = "tabelka-wrapper" class="<%= @sign_colour %>-sign tabelka-text">
+			<h1 id = "tabelka-text" style="font-family: <%= @sign_font %>"><%= @sign_text %></h1>
+		<div>
 	</body>
 </html>
