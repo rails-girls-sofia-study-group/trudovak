@@ -4,6 +4,10 @@ body {
     color:black;
 }
 
+h1, div {
+    margin:0;
+    padding:0;
+}
 h1 {
 /*other H1 attributes possible*/
     font-size: 20px;
@@ -18,7 +22,7 @@ h1 {
 }
 
 
-.tabelka-text {
+#tabelka-wrapper {
     /*background:darkblue;*/
     position:fixed;
     top:0;
@@ -26,16 +30,20 @@ h1 {
     right:0;
     bottom:0;
     margin:4%;
-    padding:6%;
     /*border:0.5em solid grey;*/
-    color:#EEE;
-    font-size: 80px;
-    text-align: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+#tabelka-text{
+    padding:6%;
+    color:#EEE;
+    font-size: 180px;
+    text-align: center;
     white-space: pre;
     word-wrap: break-word;
+
 }
 
 .red-sign {
@@ -44,4 +52,16 @@ h1 {
 
 .blue-sign {
    background-image: url("../bg-clean-blue.jpg");
+}
+
+.long-text {
+    font-size: 20px;
+}
+
+.medium-text {
+    font-size: 50px;
+}
+
+.short-text {
+    font-size: 100px;
 }

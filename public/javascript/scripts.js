@@ -1,59 +1,41 @@
-<<<<<<< HEAD
-
 window.onload=function(){
-	var inputElement = document.getElementById('copy-field');
+	// var inputElement = document.getElementById('copy-field');
 
-	inputElement.addEventListener('focus', function(){
-		setTimeout (function() {
-			inputElement.select();
-		}, 0)
-	});
+	// inputElement.addEventListener('focus', function(){
+	// 	setTimeout (function() {
+	// 		inputElement.select();
+	// 	}, 0)
+	// });
 
-	// main.js
-	var client = new ZeroClipboard( document.getElementById("copy-button") );
+	// // main.js
+	// var client = new ZeroClipboard( document.getElementById("copy-button") );
 
-	client.on( "ready", function( readyEvent ) {
-	  // alert( "ZeroClipboard SWF is ready!" );
+	// client.on( "ready", function( readyEvent ) {
+	//   // alert( "ZeroClipboard SWF is ready!" );
 
-	  client.on( "aftercopy", function( event ) {
-	    // `this` === `client`
-	    // `event.target` === the element that was clicked
-	    // event.target.style.display = "none";
-	    alert("Copied text to clipboard: " + event.data["text/plain"] );
-	  } );
-	} );
+	//   client.on( "aftercopy", function( event ) {
+	//     // `this` === `client`
+	//     // `event.target` === the element that was clicked
+	//     // event.target.style.display = "none";
+	//     alert("Copied text to clipboard: " + event.data["text/plain"] );
+	//   } );
+	// } );
+	resizeFont();
 };
 
+function resizeFont(){
+	var tabelkaVisochina = document.getElementById('tabelka-wrapper').clientHeight;
+	var textVisochina = document.getElementById('tabelka-text').clientHeight;
+	var ratio = textVisochina/tabelkaVisochina;
+	var fontSizeTbl =  parseInt(window.getComputedStyle(document.getElementById("tabelka-text")).fontSize);
 
-function autoResizeText() {
-	if(){
-		
+	if (ratio < 1) {
+		console.log("tabelkaVisochina:" + tabelkaVisochina + "    text: "+ textVisochina);
+		return ;
 	}
-}
+	
+	document.getElementById("tabelka-text").style.fontSize = fontSizeTbl - 10 +"px";
+	resizeFont();
 
+} 
 
-=======
-window.onload=function(){
-	var inputElement = document.getElementById('copy-field');
-
-	inputElement.addEventListener('focus', function(){
-		setTimeout (function() {
-			inputElement.select();
-		}, 0)
-	});
-
-	// main.js
-	var client = new ZeroClipboard( document.getElementById("copy-button") );
-
-	client.on( "ready", function( readyEvent ) {
-	  // alert( "ZeroClipboard SWF is ready!" );
-
-	  client.on( "aftercopy", function( event ) {
-	    // `this` === `client`
-	    // `event.target` === the element that was clicked
-	    // event.target.style.display = "none";
-	    alert("Copied text to clipboard: " + event.data["text/plain"] );
-	  } );
-	} );
-};
->>>>>>> 54105f87c6aa1fc094b28265f5e2380e01971f5f

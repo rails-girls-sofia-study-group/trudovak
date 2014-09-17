@@ -22,22 +22,30 @@ post "/s/" do
   end
 end
 
-get "/fullscreen/:colour/:font/:sign" do
-  @sign_text = CGI.unescape params[:sign]
-  @sign_colour = params[:colour]
-  @sign_font = params[:font]
-  @sign_link = request.url + CGI.escape(@sign_text)
-  erb :sign_as_html_fullscreen
-end
 
-get "/s/:colour/:font/:sign" do
+get "/s/:colour/:font/:sign*" do
   @sign_text = CGI.unescape params[:sign]
   @sign_colour = params[:colour]
   @sign_font = params[:font]
   @sign_link = request.url 
   @flattened = params["flattened"]
-  if not @flattened
+
+   # creates different css classes for different length of sign text
+
+  if @sign_text.to_s.length < 35
+    @sign_text_length = "short"
+  elsif @sign_text.length > 100
+    @sign_text_length = "long"
+  else 
+    @sign_text_length = "medium"
+  end
+
+  @fullscreen = params["fullscreen"]
+  if @fullscreen
+    erb :sign_as_html_fullscreen
+  elsif not @flattened
     erb :sign_as_html
   else "TODO: RENDER TEXT AS IMAGE"
   end
 end
+
