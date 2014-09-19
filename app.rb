@@ -2,6 +2,7 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'cgi'
+require'./utils'
 Bundler.require(:default)
 
 get "/" do
@@ -25,6 +26,7 @@ end
 
 get "/s/:colour/:font/:sign*" do
   @sign_text = CGI.unescape params[:sign]
+  @sign_text = removeExtraSpace(@sign_text)
   @sign_colour = params[:colour]
   @sign_font = params[:font]
   @sign_link = request.url 

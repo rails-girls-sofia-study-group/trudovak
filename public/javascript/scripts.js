@@ -1,4 +1,3 @@
-
 window.onload=function(){
 	// var inputElement = document.getElementById('copy-field');
 
@@ -39,7 +38,4 @@ function resizeFont(){
 	resizeFont();
 
 } 
-
-
-
 
